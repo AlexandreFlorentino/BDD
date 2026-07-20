@@ -1,0 +1,36 @@
+banco de dados relacional -> é um sistema que organiza os dados em tabelas estruturadas e interconectadas, garantindo consistência e integridade.
+como surgiram os bancos de dados relacionais? 
+- proposta de modelo relacional por Edgar Codd(1970).
+- Criação da linguagem SQL pela IBM(1974).
+- expansão comercial dos SGBDRs nos anos 1980.
+
+o que são tabelas e registros?
+- uma tabela é uma estrutura que organiza os dados em linhas e colunas. 
+- cada linha representa um registro, enquanto cada coluna contém um tipo específico de dado, como nome, endereço ou telefone.
+
+o que são chaves primárias e estrangeiras? 
+- a chave primária é um campo que identifica unicamente cada registro dentro de uma tabela. 
+- já a chave estrangeira é um campo que cria uma relação entre duas tabelas, garantindo que os dados estejam conectados de forma lógica.
+
+Banco de dados relacionais -> SQL
+Banco de dados não relacionais -> NoSQL.
+
+SQL x NOSQL: Quando escolher cada um? 
+SQL(Relacional): Organização estruturada, integridade e suporte a transações complexas.
+Ideal para Sistemas financeiros e empresariais.
+NoSQL(Não relacional): Flexibilidade e escalabilidade horizontal. 
+Ideal para grandes volumes de dados não estruturados, como redes sociais e big data.
+
+Como os SGBD's podem nos auxiliar a desenvolver e gerenciar banco de dados? 
+SGBD -> Sistema de gerenciamento de banco de dados.
+Facilita a criação, a manutenção e edição de banco de dados. Como uma "IDE".
+
+Quais os principais SGBD's usados no mercado? 
+-MySQL.
+-PostgreeSQL.
+-OracleDB.
+-SQLserver.
+
+
+
+
