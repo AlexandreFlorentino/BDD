@@ -1,0 +1,37 @@
+Como garantir que várias transações ocorram ao mesmo tempo, sem comprometer a integridade dos dados? 
+
+por que as transações e o controle de concorrência são tão importantes?
+
+o que é uma transação? 
+-> é um conjunto de operações que formam uma única lógica de trabalho.
+-> garante que todas as operações sejam realizadas com sucesso ou nenhuma delas.
+
+Quais são as propriedades ACID?
+- Atomicidade
+- Consistência
+- Isolamento
+- Durabilidade
+
+Atomicidade -> Garante que todas as operações dentro de uma transação seja realizada por completo ou nenhuma é realizada.
+            -> Ou tudo, ou nada. Ou o pix chega, ou é estornado.
+Consistência-> Garante que o BD sempre permaneça em um estado consistente. 
+Isolamento  -> Garante que as transações concorrentes não interfiram uma nas outras.
+            -> garante que várias transações sejam feitas ao mesmo tempo, sem afetar os resultados umas das outras.
+Durabilidade-> Garante que os resultados de uma transação bem sucedida permaneçam permanentes, mesmo em caso de falha do sistema.
+
+Quais problemas podem surgir quando várias transações ocorrem simultaneamente? 
+Principais problemas de concorrência:
+-> Leitura suja: Uma transação lê dados que foram modificados por outra transação ainda não confirmada.
+-> Leitura não repetível: Uma transação realiza leitura múltiplas que retornam resultados diferentes.
+-> Fantasma: Uma transação obtém um conjunto de registros e, em seguida, exclui registros que afetam o conjunto original.
+
+Como resolver os problemas de concorrência? 
+-> Bloqueios(Locks): Restringem o acesso simultâneo aos dados, garantindo que apenas uma transação modifique um registro por vez.
+-> Controle otimista: Permite o acesso simultâneo e verifica conflitos ao final da transação.
+-> Timestamp ordering: Utiliza carimbos de tempo para ordenar as transações e evitar conflitos.
+
+O que são níveis de isolamento?
+Isolamento de transações -> Read Uncommitted -> Garante que dados ainda não confirmados sejam lidos. Garante alto desempenho, mas trazem o risco de leitura suja.
+                         -> Read Committed -> Garante que apenas os dados confirmados sejam lidos. Não corre o risco de leitura suja, mas pode ocorrer leituras não repetíveis, que é quando os dados mudam.
+                         -> Repeatable Read -> Evita leituras sujas e leituras não repetíveis. No entando, ainda pode enfrentar os fantasmas. 
+                         -> Serializable -> Dos quatro, é o nível mais seguro. Garante que cada transação seja feito de maneira isolada. Porém o desempenho é menor.
