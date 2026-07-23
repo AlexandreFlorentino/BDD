@@ -1,0 +1,41 @@
+A normalização é um processo fundamental para quem trabalha com banco de dados, mas por que isso é tão importante?
+-Evitar redundâncias e inconsistências;
+-Garantir a integridade dos dados;
+-Melhorar a eficiência na recuperação de informações;
+
+Conceitos fundamentais da normalização:
+1. Redundância: Repetição desnecessária de dados.
+2. Inconsistência: Dados conflitantes ou contraditórios.
+3. Integridade: Garantia de precisão e consistência dos dados.
+
+Formas normais: 
+1. Primeira forma normal: 1NF
+2. Segunda forma normal: 2NF
+3. Terceira forma normal: 3NF
+4. Quarta forma normal: 4NF
+
+1. Primeira forma normal(1FN): 
+1.1 Garante que cada coluna contenha valores únicos e indivisíveis.
+1.2 Elimina grupos repetitivos e valores compostos.
+1.3 Evita registros com múltiplas informações em uma única célula.
+
+2. Segunda forma normal(2FN):
+2.1 Elimina dependências parciais em tabelas com chave composta.
+2.2 Garante que todos os atributos não chave.
+2.3 Foca em evitar redundâncias decorrentes de chaves compostas.
+
+3. Terceira forma normal(3FN):
+3.1 Elimina dependências transitivas.
+3.2 Nenhum atributo não chave deve depender de outro atributo não chave.
+3.3 Foca na organização clara e direta das dependências.
+
+4. Quarta forma normal(4FN):
+4.1 Elimina dependências multivaloradas.
+4.2 Garante que não haja relações entre atributos independentes na mesma tabela.
+4.3 Cada lado deve estar ligado diretamente a chave primária.
+
+Boas práticas da normalização
+1. planeje a estrutura do bdd antes de criar as tabelas
+2. utilize chaves primárias e estrangeiras adequadamente.
+3. Evite normalizar excessivamente se o desempenho for crítico.
+4. Revise a estrutura periodicamente para ajustes.
