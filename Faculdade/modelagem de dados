@@ -1,0 +1,39 @@
+é fundamental porque garante que as informações sejam organizadas de maneira clara e estruturadas, facilitando o armazenamento e o acesso.
+
+o que é modelagem de dados? 
+-Processo de estruturar e organizar os dados para garantir consistência e eficiência. 
+-Criar representação visual que auxilia na compreensão das relações entre as informações.
+
+Divide-se em três etapas:
+-modelagem conceitual
+-lógica
+-física
+
+Modelagem conceitual:
+- Representação de alto nível dos dados e suas relações, sem se preocupar com aspectos técnicos.
+- Utiliza diagramas como o DER para visualizar as conexões.
+
+Modelagem lógica:
+-Representa a estrutura lógica dos dados, definindo tabelas e relacionamentos.
+-Foco na organização de dados, sem considerar o ambiente físico de armazenamento.
+
+Modelagem física:
+-Tradução do modelo lógico para o ambiente físico de armazenamento.
+-Define tipos de dados, índices e estrutura de armazenamento.
+
+Conectando os conceitos: Entidades e relacionamentos.
+Entidade- Representa os atributos ou conceitos que queremos armazenar.
+        Atributo - Característica ou propriedade uma entidade.
+
+Relacionamentos e cardinalidades:
+ um-para-um(1:1): Cada registro de uma tabela se relaciona com um único registro de outra.
+ ex: uma pessoa e seu passaporte
+ um-para-muitos(1:N): um registro de uma tabela se relaciona com vários registros de outra.
+ ex: um cliente e seus pedidos 
+ muitos-para-muitos(N:N): vários registros de uma tabela se relacionam com vários registros de outra.
+ ex: relação entre alunos e disciplina em uma universidade.
+
+
+
+
+
