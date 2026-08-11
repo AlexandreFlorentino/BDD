@@ -1,0 +1,65 @@
+Como utilizar os principais comandos SQL para criar, modificar, excluir e manipular tabelas e registros?
+
+Com SQL, podemos:
+1- Criar estruturas de tabelas de forma eficiente.
+2- Manipular registros com comandos específicos.
+3- Atualizar e excluir dados de maneira segura e rápida.
+
+Comandos DDL -  definindo estruturas.
+Criando tabelas com create:
+  CREATE TABLE
+   Clientes(
+    idCliente INT PRIMARY KEY.
+    nome VARCHAR(100) NOT NULL, 
+    email VARCHAR(100),
+    telefone VARCHAR(15)
+    );
+
+
+    CREATE TABLE -> comando responsável por criar uma nova tabela.
+    idCliente -> nome da primeira coluna.
+    INT -> informa que a tabela só aceitará números inteiros.
+    PRIMARY KEY -> é uma restrição. Garante que o valor seja único, ou seja, não pode haver dois clientes com o mesmo idCliente, e garante que o valor não seja nulo, ou seja, a tabela deve ser preenchida obrigatóriamente.
+    nome -> nome da segunda coluna.
+    VARCHAR(100) -> tipo de dado. Ele armazena TEXTO com até 100 caracteres.
+    NOT NULL -> é uma restrição que obriga essa coluna a ser preenchida obrigatóriamente.
+
+
+Alterando e excluindo tabelas:
+
+ALTER TABLE Clientes
+ADD dataCadastro DATE;
+DROP TABLE Clientes;
+
+
+ALTER TABLE... ADD	 -> "Alterar tabela para Adicionar"	  -> Adiciona uma nova coluna sem mexer nos dados existentes.	Baixo (só adiciona).
+DROP TABLE	-> "Deletar/Eliminar Tabela"	-> Remove a tabela e TODOS os seus dados do banco. É irreversível.
+
+Comandos DML - Manipulando registros.
+
+INSERTO INTO Clientes
+(nome, telefone)
+VALUES('João S.'; '99999-9999');
+
+Atualizando registros com UPDATE
+UPDATE Clientes
+SET telefone = 
+'88888-8888'
+WHERE nome = 'João S.';
+
+Apagando registros com delete:
+DELETE FROM Clientes
+WHERE nome = 'João S.';
+
+Consultando dados com SELECT
+SELECT nome, telefone
+FROM Clientes
+WHERE telefone IS NOT FULL;
+
+Refinando as consultas:
+WHERE
+ORDER BY
+GROUP BY
+HAVING
+
+
