@@ -1,0 +1,35 @@
+Nos permite combinar dados de duas ou mais tabelas facilitando uma análise mais completa.
+
+O que são joins?
+O JOIN é o recurso que permite juntar tabelas com base em uma coluna em comum (geralmente a chave estrangeira).
+
+Joins em SQL pode ser utilizado de diferentes maneiras.
+1. INNER JOIN
+2. LEFT JOIN
+3. RIGHT JOIN
+4. FULL OUTER JOIN
+
+INNER JOIN - Registros com dependências em ambas as tabelas. Tipo de Join mais utilizado.
+LEFT JOIN- Retorna todos os registros da tabela esquerda, independente da correspondência com a tabela à direita.
+RIGHT JOIN - Retorna todos os registros da tabela direita, independente da correspondência com a tabela à esquerda.
+FULL OUTER JOIN - Combina registros de ambas as tabelas. Exibe todos os dados, independente de ter relação ou não.
+
+Explorando os comandos JOINS
+
+1. INNER JOIN:
+SELECT Clientes.nome,    -> Responsável por escolher as colunas que a gente quer exibir nos resultados.
+Pedidos.idPedido,
+Pedidos.valor
+FROM Clientes            -> Representa a tabela principal da coluna. Neste caso, é a tabela 'Clientes'.
+INNER JOIN pedidos       -> Conecta a tabela 'Pedidos', com a tabela 'Clientes'.
+ON Clientes.idCliente =  -> Define a condição de junção. Garantindo que os registros só sejam combinados quando o valor das tabelas sejam iguais.
+Pedidos.idCliente;
+
+2. LEFT JOIN:
+SELECT Clientes.nome,     
+Pedidos.idPedido,
+Pedidos.valor
+FROM Clientes
+LEFT JOIN Pedidos
+ON Clientes.idCliente
+= Pedidos.idCliente;
