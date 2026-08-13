@@ -1,0 +1,28 @@
+Por que aprender subconsultas e junções? 
+1. Combina informações de múltiplas tabelas com precisão.
+2. Melhora a performance ao consolidar grandes volumes de dados.
+3. Garante análises rápidas e completas para o mercado moderno.
+
+Subconsultas: Simples e correlacionadas.
+Junções: múltiplas tabelas e SELF JOIN.
+Performance: índices e otimização.
+
+Subconsulta simples:
+Permitem criar filtros dinâmicos dentro de consultas principais.
+SELECT nome FROM Clientes WHERE idCliente IN (SELECT idCliente FROM Pedidos WHERE valor > 1000)
+
+Subconsultas correlacionadas:
+Avaliam cada linha da consulta externa de forma dinâmica.
+SELECT nome FROM Clientes c WHERE EXISTS (SELECT 1 FROM Pedidos p WHERE p.idCliente = c.idCliente AND p.valor > 1000);
+
+Junções com múltiplas tabelas
+Integra dados de três ou mais tabelas em uma única consulta.
+SELECT c.nome, p.nomeProduto, ped.valor FROM Clientes c INNER JOIN Pedidos ped ON c.idCliente = ped.idCliente INNER JOIN Produtos p ON ped.idProduto = p.idProduto;
+
+SELF JOIN
+Realiza uma junção da tabela consigo mesma
+SELECT f1.nome AS Funcionario, f2.nome AS Gerente FROM Funcionarios f1 LEFT JOIN Funcionarios f2 ON f1.idGerente = f2.idFuncionario;
+
+Índices e otimização
+Aceleram a busca e melhoram a performance de consultas.
+CREATE INDEX idx_valor ON Pedidos(valor);
